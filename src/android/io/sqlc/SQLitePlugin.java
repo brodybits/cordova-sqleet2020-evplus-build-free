@@ -505,7 +505,7 @@ public class SQLitePlugin extends CordovaPlugin {
                     this.mydb = openDatabase2(dbname, dblocation, this.openCbc, this.oldImpl);
 
                 if (!oldImpl && this.dbkey != "")
-                    EVPlusNativeDriver.sqlc_db_key_native_string(mydb1.mydbhandle, this.dbkey);
+                    EVNDKDriver.sqlc_db_key_native_string(mydb1.mydbhandle, this.dbkey);
             } catch (Exception e) {
                 Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error, stopping db thread", e);
                 dbrmap.remove(dbname);
